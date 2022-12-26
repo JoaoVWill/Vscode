@@ -11,7 +11,14 @@ echo "Vamos criar um Namespace agora, escolha um nome"
 read namespace
 echo "kubectl create namespace $namespace"
 kubectl create namespace $namespace
-
-echo "Depois de criar o $namespace vamos criar nossa aplicação, no caso um NGINX"
+echo "Depois de criar o Namespace $namespace vamos criar nossa aplicação, no caso um NGINX"
 echo "kubectl create deployment nginx --image=nginx:1.23.1 -n $namespace"
 kubectl create deployment nginx --image=nginx:1.23.1 -n $namespace
+read
+
+clear
+
+echo "Vamos espor a aplicação na porta 80 agora"
+echo "kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace"
+kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace
+
