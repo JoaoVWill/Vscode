@@ -18,7 +18,7 @@ read
 
 clear
 
-echo "Vamos espor a aplicação na porta 80 agora"
+echo "Vamos expor a aplicação na porta 80 agora"
 echo "kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace"
 kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace
 
