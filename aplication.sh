@@ -13,3 +13,5 @@ echo "kubectl create namespace $namespace"
 kubectl create namespace $namespace
 
 echo "Depois de criar o $namespace vamos criar nossa aplicação, no caso um NGINX"
+echo "kubectl create deployment nginx --image=nginx:1.23.1 -n $namespace"
+kubectl create deployment nginx --image=nginx:1.23.1 -n $namespace
