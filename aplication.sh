@@ -3,7 +3,6 @@
 clear
 
 echo "Este script será responsável por criar um Namespace e criar uma aplicação com NGINX"
-
 echo "Primeiro vamos iniciar um instancia do Minikube"
 minikube start
 
@@ -21,4 +20,6 @@ clear
 echo "Vamos expor a aplicação na porta 80 agora"
 echo "kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace"
 kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace
-
+echo "Agora o IP da aplicação para acessar o site default do NGINX"
+echo "kubectl get pod -o wide -n $namespace"
+kubectl get pod -o wide -n $namespace
