@@ -26,3 +26,5 @@ kubectl expose deployment nginx --type=NodePort --port=80 -n $namespace
 echo "Agora o IP da aplicação para acessar o site default do NGINX"
 echo "kubectl get pod -o wide -n $namespace"
 kubectl get pod -o wide -n $namespace
+
+echo "FIM DO SCRIPT, bye bye"
