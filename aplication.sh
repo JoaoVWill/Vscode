@@ -2,6 +2,7 @@
 
 #Script shell para criaçãode um Namespace e uma aplicação Nginx
 #Script podendo ser adaptado para a instalaçãode outras aplicações para kubernetes
+# Feito por JvWill
 clear
 
 echo "Este script será responsável por criar um Namespace e criar uma aplicação com NGINX"
