@@ -32,7 +32,7 @@ sudo unlink /etc/nginx/sites-enabled/default
 cd etc/nginx/sites-available/
 
 NODE_IP=$(kubectl get nodes -o wide | grep -i ready | awk '{print $6}');
-NODE_PORT=$(kubectl get svc nginx -o yaml | grep -i nodeport | awk '{print $3}');
+NODE_PORT=$(kubectl get svc nginx -o yaml -n $namespace| grep -i nodeport | awk '{print $3}');
 
 sudo echo 'server {' > reverse-proxy.conf
 sudo echo '    listen 80;' >> reverse-proxy.conf
